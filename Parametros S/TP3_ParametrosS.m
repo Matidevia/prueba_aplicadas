@@ -82,3 +82,6 @@ rl = 0.6096 + 0.3385i;
 %En polar  --> rl = 0.6972|29.042° 
 rs = conj(s11+((s12*s21*rl)/(1-(rl*s22))))
 %En polar  --> rs = 0.5567|118.63°
+
+Gt = ((abs(s21)^2)*(1-abs(rs)^2)*(1-abs(rl)^2))/(abs((1-s11*rs)*(1-s22*rl)-(s12*s21*rl*rs))^2)
+Gtdb = 10*log10(Gt)
